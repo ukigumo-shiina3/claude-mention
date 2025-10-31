@@ -27,12 +27,7 @@ jobs:
             REPO: ${{ github.repository }}
             PR NUMBER: ${{ github.event.pull_request.number }}
 
-            Must answer in Japanese.
             Please review this pull request with a focus on:
-            ## 対象PR
-
-            {{ pr_url }}
-
             ## 注意事項
 
             - 回答はすべて日本語で行う
@@ -42,14 +37,6 @@ jobs:
             - コミットとマージは行わない
             - 最後に「対象PR」のコメントとして、以下のリンクのようにまとめてコメントを必ず行う
                 - https://github.com/PlexJP/plexjob-api/pull/3089#issuecomment-2942586166
-
-            ## 依頼内容
-
-            - 「対象PR」の依存関係更新に問題がないかの確認を行う
-            - 「対象PR」のタイトルからでなく、ファイルの更新内容を元に調査を行う
-            - 現在のバージョンと更新後のバージョン間の破壊的変更(breaking changes)を確認する
-            - CIが失敗している場合は、CIを直すためにローカルで検証し、コミットは行わず修正案の提出だけをする
-            - バージョン更新後にmake testを実行してRSpecのテストが問題ないかの確認を行う
 
             ## 破壊的変更への対応破壊的変更が見つかった場合：
 
