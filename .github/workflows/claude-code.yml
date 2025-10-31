@@ -32,6 +32,7 @@ jobs:
             - Potential bugs or issues
             - Security implications
             - Performance considerations
+            - Dependency Impact
 
             Provide detailed feedback using inline comments for specific issues.
 
