@@ -28,41 +28,38 @@ jobs:
             PR NUMBER: ${{ github.event.pull_request.number }}
 
             Please review this pull request with a focus on:
-            ## 注意事項
-
-            - 回答はすべて日本語で行う
-            - 実際の実装に影響がなければ破壊的変更への対応が不要な分、レポートは簡潔に表現する
-            - あらゆる一次情報源（コード、コミット履歴、変更履歴等）を参照する
-            - 全ての引用・参照には必ず元のURLを添付する
-            - コミットとマージは行わない
-            - 最後に「対象PR」のコメントとして、以下のリンクのようにまとめてコメントを必ず行う
+              ## Notes
+              - All responses must be written in Japanese.
+              - If the implementation is unaffected, omit unnecessary details about non-breaking changes and keep the report concise.
+              - Refer to all possible primary sources (e.g., code, commit history, changelog).
+              - Always attach the original URL for every citation or reference.
+              - Do not perform commits or merges.
+              - At the end, always post a summary comment on the PR, following the format shown in the link below:
                 - https://github.com/PlexJP/plexjob-api/pull/3089#issuecomment-2942586166
 
-            ## 破壊的変更への対応破壊的変更が見つかった場合：
+              ## Handling Breaking Changes
+              - When a breaking change is detected:
+              - Provide concrete examples of how it affects existing implementation patterns (include actual code examples if possible).
+              - Suggest specific code modifications to maintain compatibility.
+              - Assess the overall impact on the project.
+              - However, if the issue can be resolved solely through a library version upgrade, no code fix suggestion is required.
 
-            - 具体的な実装パターンへの影響例（ある場合は実際のコード例）
-            - 互換性維持のための具体的なコード修正案
-            - プロジェクト全体への影響度合い
-            - ただし、ライブラリのバージョンアップデートだけで問題が解決する場合は修正案不要
+              ## Presentation of Review Results
+              - All results must be provided in a single consolidated comment.
+              - Clearly state the conclusion first (e.g., Approved or Changes Required).
+              - Include direct links to all documents and sources used for investigation.
+              - Present code examples in Markdown format, with line-number references if applicable.
+              - Base your analysis strictly on facts and focus on critical issues.
 
-            ## レビュー結果の提示**必ず単一のコメントにまとめて提供してください**：
-
-            - 結論を最初に明示（承認または修正必要）
-            - 調査に使用した全てのドキュメント・ソースへの直接リンク
-            - コード例はマークダウン形式で、行番号参照付きで
-            - 分析は事実に基づき、重要な問題に集中
-
-            ## 調査結果 :
-
-            - 下記の観点で最後にまとめる
-                - 結論
-                - 脆弱性の詳細
-                - パッケージ更新の適切性評価
-                - プロジェクトへの影響
-                - 調査方法
-                - 参考リンク
-            - 調査結果は「対象のPR」コメントする
-
+              ## Investigation Summary
+                - At the end, summarize the findings using the following structure:
+                - Conclusion
+                - Details of vulnerabilities
+                - Assessment of package update appropriateness
+                - Impact on the project
+                - Investigation methodology
+                - Reference links
+              - All findings should be posted as a comment on the pull request.
             Provide detailed feedback using inline comments for specific issues.
 
           claude_args: |
